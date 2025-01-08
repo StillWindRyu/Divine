@@ -3,26 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table from File</title>
+    <title>Database Search</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Dynamic Table from File</h1>
+        <h1>Search Classes and Instances</h1>
     </header>
     <main>
-        <table id="data-table" border="1">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Age</th>
-                    <th>City</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Rows will be inserted dynamically -->
-            </tbody>
-        </table>
+        <form id="search-form">
+            <input type="text" id="search-query" placeholder="Enter a class or instance name" required>
+            <button type="submit">Search</button>
+        </form>
+        <h2>Search Results</h2>
+        <div id="results">
+            <h3>Classes</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody id="class-results">
+                    <!-- Class results will go here -->
+                </tbody>
+            </table>
+            <h3>Instances</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                    </tr>
+                </thead>
+                <tbody id="instance-results">
+                    <!-- Instance results will go here -->
+                </tbody>
+            </table>
+        </div>
     </main>
     <script src="script.js"></script>
 </body>
